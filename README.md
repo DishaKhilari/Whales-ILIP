@@ -116,14 +116,49 @@ The sample projects both use some Serenity features which make configuring the t
 The WebDriver configuration is managed entirely from this file, as illustrated below:
 ```java
 webdriver {
-    driver = chrome
-}
-headless.mode = true
+     driver = firefox
 
-chrome.switches="""--start-maximized;--test-type;--no-sandbox;--ignore-certificate-errors;
-                   --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;
-                   --incognito;--disable-infobars,--disable-gpu"""
+ #// Add the WebDriver proxy capability.
+ #   Proxy proxy = new Proxy();
+ #   proxy.setHttpProxy("myhttpproxy:3337");
+ #   options.setCapability("proxy", proxy);
 
+ #  // Add a ChromeDriver-specific capability.
+ #   options.addExtensions(new File("/path/to/extension.crx"));
+ #   ChromeDriver driver = new ChromeDriver(options);
+ #   driver = chrome
+
+        capabilities {
+                browserName = "firefox"
+                acceptInsecureCerts = true
+                "goog:chromeOptions" {
+                args = ["remote-allow-origins=*","test-type", "no-sandbox", "ignore-certificate-errors", "--window-size=1000,800",
+                    "incognito", "disable-infobars", "disable-gpu", "disable-default-apps", "disable-popup-blocking"]
+                }
+
+        #
+        # Chrome options can be defined using the chrome.switches property
+        #
+        chrome.switches="""--start-maximized;--test-type;--no-sandbox;--ignore-certificate-errors;
+                           --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;
+                           --incognito;--disable-infobars,--disable-gpu"""
+        #
+        # Define drivers for different platforms. Serenity will automatically pick the correct driver for the current platform
+        #
+        
+        drivers {
+          windows {
+            webdriver.chrome.driver = "src/test/resources/webdrivers/windows/chromedriver.exe"
+            webdriver.gecko.driver = "src/test/resources/webdrivers/windows/geckodriver.exe"
+          }
+          linux {
+            webdriver.chrome.driver = "src/test/resources/webdrivers/linux/chromedriver"
+            webdriver.gecko.driver = "src/test/resources/webdrivers/linux/geckodriver"
+          }
+        }
+
+
+    }
 ```
 
 Serenity uses WebDriverManager to download the WebDriver binaries automatically before the tests are executed.
