@@ -147,7 +147,7 @@ environments {
     webdriver.base.url = "https://apps.usewhale.io/trial"
   }
   staging {
-    webdriver.base.url = "https://duckduckgo.com/staging"
+    webdriver.base.url = "https://apps.usewhale.io/trial/staging"
   }
   prod {
     webdriver.base.url = "https://apps.usewhale.io/trial/prod"
