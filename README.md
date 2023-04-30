@@ -191,6 +191,6 @@ See [**this article**](https://johnfergusonsmart.com/environment-specific-config
 
 ## Want to learn more?
 For more information about Serenity BDD, you can read the [**Serenity BDD Book**](https://serenity-bdd.github.io/theserenitybook/latest/index.html), the official online Serenity documentation source. Other sources include:
-* **[Learn Software Automation Testing using Serenity BDD Online](https://ilip.owitechs.com/top-job-ready-programs-information-technology/#)** with online courses from the Owitechs initaed ILIP Job Ready Program
+* **[Learn Software Automation Testing using Serenity BDD Online](https://ilip.owitechs.com/top-job-ready-programs-information-technology/#)** with online courses from ILIP Job Ready Program powered by Owitechs
 * ** Follow for Course and Internship on [LinkedIn](https://www.linkedin.com/company/owitechs-pty-ltd/) and [Facebook](https://www.facebook.com/Owitechs/)
 * ** Follow for Daily updates on [Instagram](https://www.instagram.com/owitechs_pty_ltd/)
