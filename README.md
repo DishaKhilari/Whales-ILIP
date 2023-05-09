@@ -7,7 +7,7 @@ Serenity strongly encourages good test automation design, and supports several d
 The latest version of Serenity supports Cucumber 6.x.
 
 ## The starter project
-The best place to start with Serenity and Cucumber is to clone or download the starter project on Github ([https://github.com/DishaOwitechs/Whales-ILIP](https://github.com/DishaOwitechs/Whales-ILIP)). This project gives you a basic project setup, along with some sample tests and supporting classes.
+The best place to start with Serenity and Cucumber is to clone or download the starter project on Github ([https://github.com/DishaKhilari/Whales-ILIP](https://github.com/DishaKhilari/Whales-ILIP)). This project gives you a basic project setup, along with some sample tests and supporting classes.
 
 ### The project directory structure
 The project has build scripts for both Maven and Gradle, and follows the standard directory structure used in most Serenity projects:
