@@ -54,4 +54,39 @@ public class MyStepdefs {
     public void iEnterFirstnameAndLastname() {
 
     }
+
+    @Then("enter how you hear about us")
+    public void enterHowYouHearAboutUs() {
+        driver.findElement(By.name("howHearAboutUs")).sendKeys("Online"); //name locator for text box
+
+    }
+
+    @When("you select my goal")
+    public void youSelectMyGoal() throws InterruptedException {
+        driver.findElement(By.xpath("//div[@id=':r2:']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(".MuiBackdrop-root")).click();
+        driver.findElement(By.cssSelector(".MuiButtonBase-root:nth-child(2)")).click();
+
+    }
+
+    @And("Biggest Challenge")
+    public void biggestChallenge() {
+        driver.findElement(By.name("biggestChallenge")).sendKeys("To break high"); //name locator for text box
+    }
+
+    @Then("Click next")
+    public void clickNext() throws InterruptedException {
+        driver.findElement(By.cssSelector(".MuiButtonBase-root")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[text()='Next']")).click();
+
+    }
+
+
+    @And("Window closed")
+    public void windowClosed() {
+            driver.quit(); //Close the driver
+    }
+
 }

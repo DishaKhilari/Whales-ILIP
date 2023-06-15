@@ -1,8 +1,10 @@
 package starter.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 public class MySignupDefn extends Homepage {
 
@@ -43,4 +45,28 @@ public class MySignupDefn extends Homepage {
     }
 
 
+    @Then("enter {string}")
+    public void enter(String aboutUs) {
+        homepg.aboutUs(aboutUs);
+    }
+
+    @And("add {string}")
+    public void add(String bigChallenge) {
+        homepg.biggestChallenge(bigChallenge);
+    }
+
+    @And("Window closes")
+    public void windowCloses() {
+        homepg.quitBrowser();
+    }
+
+    @When("you select my goals")
+    public void youSelectMyGoals() throws InterruptedException {
+        homepg.youSelectMyGoal();
+    }
+
+    @Then("Clicked next")
+    public void clickedNext() throws InterruptedException {
+        homepg.clickNext();
+    }
 }
