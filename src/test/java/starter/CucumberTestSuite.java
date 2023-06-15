@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         publish = true,
-        features = "src/test/resources/features/search/Login.feature"
+        features = {"src/test/resources/features/search/Signup.feature","src/test/resources/features/search/Login.feature"},
+        tags = "@RegressionTest"
 )
 public class CucumberTestSuite {}

@@ -50,4 +50,8 @@ public class MyStepdefs {
         driver.quit(); //Close the driver
     }
 
+    @When("I enter firstname and lastname")
+    public void iEnterFirstnameAndLastname() {
+
+    }
 }
