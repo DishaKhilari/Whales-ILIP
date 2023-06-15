@@ -1,5 +1,7 @@
 package starter.stepdefinitions;
 
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,5 +58,34 @@ public class Homepage {
 
     }
 
+    public void aboutUs(String aboutUs){
+        driver.findElement(By.name("howHearAboutUs")).sendKeys(aboutUs); //name locator for text box
 
+    }
+
+    public void youSelectMyGoal() throws InterruptedException {
+        driver.findElement(By.xpath("//div[@id=':r2:']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(".MuiBackdrop-root")).click();
+        driver.findElement(By.cssSelector(".MuiButtonBase-root:nth-child(2)")).click();
+
+    }
+
+    public void clickNext() throws InterruptedException {
+        driver.findElement(By.cssSelector(".MuiButtonBase-root")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[text()='Next']")).click();
+
+
+
+    }
+    public void biggestChallenge(String bigChallenge){
+        driver.findElement(By.name("biggestChallenge")).sendKeys(bigChallenge); //name locator for text box
+
+    }
+
+    public void quitBrowser(){
+        driver.quit(); //Close the driver
+
+    }
 }
