@@ -23,3 +23,12 @@ Feature: Create you Own Workspace
         | abc@gmail.com       | Online  | To break high     |
         | sample@yahoo.com    | Friends | To achieve dreams |
         | tryonce@hotmail.com | Email   | To get job        |
+        | owi@owitechs.com    | online  | to get in         |
+
+
+      Scenario: New Testcase for same feature
+        Given I enter URL
+        When I enter email
+        Then I enter details
+        And select options
+        #Then enter my challenge and click nexts

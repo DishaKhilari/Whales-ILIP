@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
@@ -78,15 +79,23 @@ public class MyStepdefs {
     @Then("Click next")
     public void clickNext() throws InterruptedException {
         driver.findElement(By.cssSelector(".MuiButtonBase-root")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//*[text()='Next']")).click();
-
     }
 
 
     @And("Window closed")
     public void windowClosed() {
+
+        WebElement nextpage = driver.findElement(By.cssSelector(".MuiTypography-h2")); //name locator for text box
+
+        if(nextpage.isDisplayed())
+        {
+            nextpage.click();
+            System.out.println(nextpage.getText());
+        }
+        else {
             driver.quit(); //Close the driver
-    }
+        }    }
 
 }

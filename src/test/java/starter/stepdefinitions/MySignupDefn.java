@@ -69,4 +69,24 @@ public class MySignupDefn extends Homepage {
     public void clickedNext() throws InterruptedException {
         homepg.clickNext();
     }
+
+    @When("I enter email")
+    public void iEnterEmail() {
+        homepg.iEnterEmail();
+    }
+
+    @Then("I enter details")
+    public void iEnterDetails() {
+    homepg.iEnterDetails();
+    }
+
+    @And("select options")
+    public void selectOptions() {
+        homepg.Iselectoption();
+    }
+
+    @Then("enter my challenge and click next")
+    public void enterMyChallengeAndClickNext() {
+        homepg.ienterchallenge();
+    }
 }

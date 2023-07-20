@@ -76,16 +76,43 @@ public class Homepage {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[text()='Next']")).click();
 
-
-
     }
+
     public void biggestChallenge(String bigChallenge){
         driver.findElement(By.name("biggestChallenge")).sendKeys(bigChallenge); //name locator for text box
 
     }
 
     public void quitBrowser(){
-        driver.quit(); //Close the driver
+        WebElement nextpage = driver.findElement(By.cssSelector(".MuiTypography-h2")); //css locator for next page
+
+        if(nextpage.isDisplayed())
+        {
+            nextpage.click();
+            System.out.println(nextpage.getText());
+        }
+        else {
+            driver.quit(); //Close the driver
+        }
+    }
+
+    public void iEnterEmail(){
+        driver.findElement(By.name("email")).sendKeys("abc@gmail.com");
+    }
+
+    public void iEnterDetails(){
+        driver.findElement(By.name("howHearAboutUs")).sendKeys("Friend");
+    }
+
+    public void Iselectoption(){
+        driver.findElement(By.xpath("//div[@id=':r2:']")).click();
+        driver.findElement(By.xpath(".//div[@id='menu-mainGoal']/div[3]/ul/li[2]")).click();
 
     }
+
+    public void ienterchallenge(){
+        driver.findElement(By.name("biggestChallenge")).sendKeys("to break high");
+        driver.findElement(By.xpath("//button[contains(.,'Next')]")).click();
+    }
+
 }
