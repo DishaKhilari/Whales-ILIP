@@ -10,7 +10,7 @@ public class MySignupDefn extends Homepage {
 
     Homepage homepg = new Homepage();
 
-    public void MySignDefn() {
+    public void MySignDefn() throws InterruptedException {
         homepg.Openbrowser();
     }
 
