@@ -1,14 +1,13 @@
 @IntegrationTest
 Feature: Valid Details for Signup
 
-  @UnitTest
   Scenario: Valid Details for Signup
     Given I enter URL
     When I enter email address
     Then I enter first name and last name
     And I click on signup button
 
-  @RegressionTest
+    @RegressionTest
   Scenario Outline: Valid Detail with some more data
     Given I enter URL
     When I enter my '<email>'

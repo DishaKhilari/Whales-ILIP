@@ -4,14 +4,18 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 
 public class MySignupDefn extends Homepage {
 
     Homepage homepg = new Homepage();
 
+//    public void MySignDefn() throws InterruptedException {
+//        homepg.Openbrowser();
+//    }
+
     @Given("I enter URL")
     public void i_enter_url() throws InterruptedException {
+        homepg.Openbrowser();
         homepg.URL();
     }
 
@@ -68,25 +72,5 @@ public class MySignupDefn extends Homepage {
     @Then("Clicked next")
     public void clickedNext() throws InterruptedException {
         homepg.clickNext();
-    }
-
-    @When("I enter email")
-    public void iEnterEmail() {
-        homepg.iEnterEmail();
-    }
-
-    @Then("I enter details")
-    public void iEnterDetails() {
-    homepg.iEnterDetails();
-    }
-
-    @And("select options")
-    public void selectOptions() {
-        homepg.Iselectoption();
-    }
-
-    @Then("enter my challenge and click next")
-    public void enterMyChallengeAndClickNext() {
-        homepg.ienterchallenge();
     }
 }
