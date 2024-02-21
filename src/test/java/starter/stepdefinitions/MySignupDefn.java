@@ -10,8 +10,13 @@ public class MySignupDefn extends Homepage {
 
     Homepage homepg = new Homepage();
 
+    public void MySignDefn() {
+        homepg.Openbrowser();
+    }
+
     @Given("I enter URL")
     public void i_enter_url() throws InterruptedException {
+        homepg.Openbrowser();
         homepg.URL();
     }
 
